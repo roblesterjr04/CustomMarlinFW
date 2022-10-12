@@ -1,9 +1,0 @@
-{
-  "actions" : {
-    "build" : {
-      "enabled" : true,
-      "script" : "#!\/bin\/sh\ncd Geeetech\/MainBoard\nplatformio run"
-    }
-  },
-  "openLogOnRun" : "success"
-}
