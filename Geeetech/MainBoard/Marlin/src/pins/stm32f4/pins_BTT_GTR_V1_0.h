@@ -286,7 +286,8 @@
 //
 #define TEMP_0_PIN                          PC1   // T1 <-> E0
 #define TEMP_1_PIN                          PC2   // T2 <-> E1 PC2
-#define TEMP_2_PIN                          PC3   // T3 <-> E2 PC3
+//#define TEMP_2_PIN                          PC3   // T3 <-> E2 PC3
+#define TEMP_CHAMBER_PIN                    PC3
 
 #if ENABLED(M5_EXTENDER)
   #define TEMP_3_PIN                        PA3   // M5 TEMP1
