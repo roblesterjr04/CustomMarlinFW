@@ -142,7 +142,7 @@
 
 // This defines the number of extruders
 // :[0, 1, 2, 3, 4, 5, 6, 7, 8]
-#define EXTRUDERS 1
+#define EXTRUDERS 2
 
 // Generally expected filament diameter (1.75, 2.85, 3.0, ...). Used for Volumetric, Filament Width Sensor, etc.
 #define DEFAULT_NOMINAL_FILAMENT_DIA 1.75
@@ -286,7 +286,7 @@
  *   - This implementation supports up to two mixing extruders.
  *   - Enable DIRECT_MIXING_IN_G1 for M165 and mixing in G1 (from Pia Taubert's reference implementation).
  */
-#define MIXING_EXTRUDER
+//#define MIXING_EXTRUDER
 #if ENABLED(MIXING_EXTRUDER)
   #define MIXING_STEPPERS 3        // Number of steppers in your mixing extruder
   #define MIXING_VIRTUAL_TOOLS 3  // Use the Virtual Tool method with M163 and M164
@@ -300,7 +300,7 @@
 // Offset of the extruders (uncomment if using more than one and relying on firmware to position when changing).
 // The offset has to be X=0, Y=0 for the extruder 0 hotend (default extruder).
 // For the other hotends it is their distance from the extruder 0 hotend.
-//#define HOTEND_OFFSET_X { 0.0, 20.00 } // (mm) relative X-offset for each nozzle
+#define HOTEND_OFFSET_X { 0.0, 24.00 } // (mm) relative X-offset for each nozzle
 //#define HOTEND_OFFSET_Y { 0.0, 5.00 }  // (mm) relative Y-offset for each nozzle
 //#define HOTEND_OFFSET_Z { 0.0, 0.00 }  // (mm) relative Z-offset for each nozzle
 
@@ -515,7 +515,7 @@
  * heater. If your configuration is significantly different than this and you don't understand
  * the issues involved, don't use bed PID until someone else verifies that your hardware works.
  */
-//#define PIDTEMPBED
+#define PIDTEMPBED
 
 //#define BED_LIMIT_SWITCHING
 
@@ -1157,11 +1157,11 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 320
+#define X_BED_SIZE 300
 #define Y_BED_SIZE 320
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS -10
+#define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
@@ -2489,7 +2489,7 @@
 
 // Set number of user-controlled fans. Disable to use all board-defined fans.
 // :[1,2,3,4,5,6,7,8]
-//#define NUM_M106_FANS 1
+#define NUM_M106_FANS 2
 
 // Increase the FAN PWM frequency. Removes the PWM noise but increases heating in the FET/Arduino
 //#define FAST_PWM_FAN
