@@ -66,7 +66,7 @@ wchar_t get_val_utf82uni(uint8_t *pstart) {
  */
 uint8_t* get_utf8_value(uint8_t *pstart, wchar_t *pval) {
   uint32_t val = 0;
-  uint8_t *p = pstart;
+  const uint8_t *p = pstart;
   /*size_t maxlen = strlen(pstart);*/
 
   assert(NULL != pstart);
@@ -142,12 +142,12 @@ uint8_t* get_utf8_value(uint8_t *pstart, wchar_t *pval) {
   return p;
 }
 
-void usage(char* progname) {
+void usage(char *progname) {
   fprintf(stderr, "usage: %s\n", progname);
   fprintf(stderr, "   read data from stdin\n");
 }
 
-void utf8_parse(const char* msg, unsigned int len) {
+void utf8_parse(const char *msg, unsigned int len) {
   uint8_t *pend = NULL;
   uint8_t *p;
   uint8_t *pre;

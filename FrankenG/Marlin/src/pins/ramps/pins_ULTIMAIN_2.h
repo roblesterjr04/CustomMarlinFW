@@ -33,9 +33,8 @@
  *    case light
  */
 
-#if NOT_TARGET(__AVR_ATmega2560__)
-  #error "Oops! Select 'Arduino/Genuino Mega or Mega 2560' in 'Tools > Board.'"
-#endif
+#define REQUIRE_MEGA2560
+#include "env_validate.h"
 
 #define BOARD_INFO_NAME         "Ultimaker 2.x"
 #define DEFAULT_MACHINE_NAME    "Ultimaker"
@@ -108,8 +107,8 @@
 #define SDSS                                  53
 #define SD_DETECT_PIN                         39
 #define LED_PIN                                8
-#define SAFETY_TRIGGERED_PIN                  28  // PIN to detect the safety circuit has triggered
-#define MAIN_VOLTAGE_MEASURE_PIN              14  // ANALOG PIN to measure the main voltage, with a 100k - 4k7 resitor divider.
+//#define SAFETY_TRIGGERED_PIN                28  // PIN to detect the safety circuit has triggered
+//#define MAIN_VOLTAGE_MEASURE_PIN            14  // ANALOG PIN to measure the main voltage, with a 100k - 4k7 resitor divider.
 
 //
 // LCD / Controller
